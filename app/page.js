@@ -30,7 +30,6 @@ export default function NotFound() {
             />
           </div>
         </div>
-
         {/* 404 Message */}
         <h2 className="text-3xl font-bold tracking-tight text-black md:text-5xl mt-10">
           404 – Unavailable
