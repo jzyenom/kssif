@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import Custom Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Sora:wght@400;600;700&display=swap");
+
+/* CSS Variables */
+:root {
+  --color-primary: #780000;
+  --color-secondary: #302f30;
+  --color-text: #b8bcbf;
+  --color-background: #101111;
+  --color-overlay: rgba(0, 0, 0, 0.7);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--color-primary);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Reusable Classes */
+.g327 {
+  border-color: var(--color-secondary);
+}
+
+.txg {
+  color: var(--color-text);
+}
+
+.ktq4 {
+  background-color: var(--color-background);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.clearNav {
+  backdrop-filter: saturate(180%) blur(5px) !important;
+  background-color: var(--color-overlay) !important;
+}
+
+/* Font Utilities */
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-sora {
+  font-family: "Sora", sans-serif;
+}
+
+/* Responsive Grid */
+.fsac4 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 32px;
+}
+
+@media (min-width: 720px) {
+  .fsac4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Typography */
+.text-80 {
+  font-size: 80px;
+}
+
+.ld-04 {
+  letter-spacing: 0.025em;
+}
+
+.lh-6 {
+  line-height: 1.08;
+}
+
+/* Transitions */
+.tr04 {
+  transition: 0.4s;
+}
+
+
+/* Images */
+.image-container {
+  position: relative;
+  width: 100%; /* Make sure the container takes up full width */
+  height: 100vh; /* Adjust to the desired height */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1003" height="998" viewBox="0 0 1003 998"><path d="M1666.53 533.07C1660.9 487.083 1635.84 456.611 1594.23 437.607C1572.96 427.87 1551.74 419.012 1532.14 406.02C1511.89 392.588 1493.64 376.369 1477 358.743C1444.37 324.194 1417.99 284.367 1392.67 244.304C1344.78 168.608 1297.22 87.6034 1220.48 37.3642C1185.89 14.7228 1140.9 -4.4579 1098.71 0.909167C1079.99 3.28475 1062.2 11.5846 1051.52 27.6858C1038.73 47.0132 1039.43 71.033 1032.98 92.5599C1023.27 125.056 996.005 149.369 964.226 158.724C866.542 139.778 761.434 137.813 668.649 178.198C589.158 212.776 522.812 284.836 505.705 371.207C501.685 391.503 500.482 412.355 502.742 432.943C505.382 456.905 513.569 479.135 520.612 502.011C528.417 527.322 532.466 552.779 523.898 578.441C516.592 600.32 501.832 619.148 484.49 634.076C401.536 705.461 284.045 675.429 187.211 708.922C149.534 721.944 113.266 743.705 90.4072 777.11C69.0158 808.345 64.2621 847.175 74.0042 883.367C94.5446 959.767 160.743 1014.17 183.807 1089.57C217.288 1199 120.22 1282.52 60.1541 1359.86C31.8376 1396.35 8.04007 1436.56 1.70188 1482.98C-3.81469 1523.37 3.75592 1566.8 32.043 1597.66C47.419 1614.43 67.754 1625.63 88.2651 1634.9C112.591 1645.9 137.591 1656.19 163.267 1663.56C208.339 1676.52 253.909 1675.67 298.981 1663.32C387.568 1639.07 465.681 1579.3 558.553 1570.15C611.635 1564.93 662.253 1581.09 711.08 1600.15C761.844 1619.97 811.669 1640.68 865.691 1650.07C962.7 1666.93 1065.67 1652.15 1144.54 1590.18C1178.9 1563.17 1207.07 1528.32 1224.06 1487.94C1242.43 1444.27 1246.36 1396.35 1245.57 1349.45C1243.96 1254.49 1219.93 1147.56 1272.48 1061.36C1320.9 981.939 1414.03 945.865 1485.92 892.429C1560.49 836.999 1616.77 759.103 1646.46 671.089C1661.07 627.742 1672.17 578.939 1666.56 533.011L1666.53 533.07Z" fill="white"/></svg>');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
