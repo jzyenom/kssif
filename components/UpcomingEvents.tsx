@@ -58,8 +58,6 @@
 // };
 
 // export default UpcomingEvents;
-import React from 'react';
-
 type Event = {
   date: string;
   title: string;

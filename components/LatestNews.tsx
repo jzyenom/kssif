@@ -32,7 +32,6 @@
 // export default LatestNews;
 
 
-import React from 'react';
 
 type News = {
   title: string;

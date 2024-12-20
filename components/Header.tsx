@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation"; // Importing the Navigation component
 
 const Header: React.FC = () => {
