@@ -10,7 +10,7 @@ type Metadata = {
 
 // Exporting metadata
 export const metadata: Metadata = {
-  title: "KSSIF - Kingdom Stars Sport International Foundation",
+  title: "KSSIF - Kingdom Star Sports International Foundation",
   description: "Christian Sport organization",
   icon: "favicon.png", // Ensure this file is in the 'public' directory
 };

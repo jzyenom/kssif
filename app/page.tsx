@@ -11,9 +11,6 @@ import Footer from "@/components/Footer";
 const Home: React.FC = () => {
   return (
     <>
-      {/* Applying SEO configurations with type safety */}
-
-      {/* Ensure that Header and Layout are typed correctly */}
       <Nav />
       <Hero />
       <Partners />
