@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

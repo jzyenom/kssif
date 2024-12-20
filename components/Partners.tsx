@@ -1,3 +1,5 @@
+import React from "react"
+
 const Partners: React.FC = () => {
   return (
     <section className="py-10 bg-gray-100">
