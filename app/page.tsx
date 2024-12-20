@@ -1,8 +1,11 @@
 "use client";
-import Header from "@/components/Header"; // Ensure this is correctly exported and implemented
-import Layout from "@/components/Layout"; // Ensure this is correctly exported and implemented
-
-
+import Nav from "@/components/Nav"; 
+import Hero from "@/components/Hero"; 
+import Partners from "@/components/Partners";
+import UpcomingEvents from "@/components/UpcomingEvents";
+import LatestNews from "@/components/LatestNews"; 
+import NewsLetter from "@/components/NewsLetter"; 
+import Footer from "@/components/Footer"; 
 
 const Home: React.FC = () => {
   return (
@@ -10,8 +13,13 @@ const Home: React.FC = () => {
       {/* Applying SEO configurations with type safety */}
 
       {/* Ensure that Header and Layout are typed correctly */}
-      <Header />
-      <Layout />
+      <Nav />
+      <Hero />
+      <Partners />
+      <UpcomingEvents />
+      <LatestNews />
+      <NewsLetter />
+      <Footer />
     </>
   );
 };
