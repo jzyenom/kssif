@@ -1,15 +1,35 @@
-import  { useState } from "react";
-import logo from "../public/kssif_Logo.png";
-import profileIcon from "../public/kssif_Logo.png";
+import { useState, useEffect } from "react";
 
-const Navbar: React.FC = () => {
+const Nav: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const links = ["Home", "About Us", "Services", "Contact Us", "Donate"];
 
   return (
-    <nav className="bg-gray-800 text-white">
+    <nav
+      className={`fixed top-0 w-full z-50 shadow-md transition-all duration-300 ${
+        isScrolled
+          ? "bg-black/50 backdrop-blur-md text-blue-500"
+          : "bg-black text-white"
+      }`}
+    >
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
+        {/* Logo */}
         <img src="/kssif_Logo.png" alt="Logo" className="h-10" />
+        
+        {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-4 items-center">
           {links.map((link, idx) => (
             <a
@@ -31,12 +51,16 @@ const Navbar: React.FC = () => {
             className="h-10 w-10 rounded-full"
           />
         </div>
+
+        {/* Mobile Navigation Toggle */}
         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
           <span className="text-xl">☰</span>
         </button>
       </div>
+
+      {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900 space-y-2 py-4">
+        <div className="md:hidden bg-black/75 space-y-2 py-4">
           {links.map((link, idx) => (
             <a
               key={idx}
@@ -62,66 +86,4 @@ const Navbar: React.FC = () => {
   );
 };
 
-export default Navbar;
-
-// type NavbarProps = {
-//   logo: string;
-//   profileIcon: string;
-// };
-
-// const Navbar: React.FC<NavbarProps> = ({ logo, profileIcon }) => {
-//   const [isOpen, setIsOpen] = useState(false);
-//   const links = ["Home", "About Us", "Services", "Contact Us", "Donate"];
-
-//   return (
-//     <nav className="bg-gray-800 text-white">
-//       <div className="container mx-auto px-4 flex justify-between items-center h-16">
-//         <img src={logo} alt="Logo" className="h-10" />
-//         <div className="hidden md:flex space-x-6 items-center">
-//           {links.map((link, idx) => (
-//             <a key={idx} href={`#${link.toLowerCase().replace(/\s+/g, "")}`} className="hover:text-orange-500">
-//               {link}
-//             </a>
-//           ))}
-//           <input
-//             type="text"
-//             placeholder="Search"
-//             className="bg-gray-700 text-white px-3 py-1 rounded"
-//           />
-//           <img src={profileIcon} alt="Profile" className="h-10 w-10 rounded-full" />
-//         </div>
-//         <button
-//           className="md:hidden"
-//           onClick={() => setIsOpen(!isOpen)}
-//         >
-//           <span className="text-xl">☰</span>
-//         </button>
-//       </div>
-//       {isOpen && (
-//         <div className="md:hidden bg-gray-900 space-y-2 py-4">
-//           {links.map((link, idx) => (
-//             <a
-//               key={idx}
-//               href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
-//               className="block text-center text-white hover:bg-gray-700 py-2"
-//             >
-//               {link}
-//             </a>
-//           ))}
-//           <input
-//             type="text"
-//             placeholder="Search"
-//             className="bg-gray-700 text-white px-3 py-1 rounded block mx-auto"
-//           />
-//           <img
-//             src={profileIcon}
-//             alt="Profile"
-//             className="h-10 w-10 rounded-full block mx-auto my-2"
-//           />
-//         </div>
-//       )}
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
+export default Nav;

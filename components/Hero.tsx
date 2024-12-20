@@ -1,3 +1,4 @@
+import React from "react";
 
 const Hero: React.FC = () => {
   return (
@@ -28,19 +29,17 @@ const Hero: React.FC = () => {
             className="rounded-lg shadow-lg w-full"
           />
         </div> */}
-<div className="md:w-1/2">
-        <div className="hero-container md:ml-10">
-      <img
-        src="/path-to-hero-image.jpg" // Replace with the actual path to the image
-        alt="Faith and Sports"
-      />
-    </div>
-    </div>
+        <div className="md:w-1/2">
+          <div className="hero-container md:ml-10">
+            <img
+              src="/path-to-hero-image.jpg" // Replace with the actual path to the image
+              alt="Faith and Sports"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Hero;
-
-

@@ -47,10 +47,6 @@ a {
   border-radius: 10px;
 }
 
-.clearNav {
-  backdrop-filter: saturate(180%) blur(5px) !important;
-  background-color: var(--color-overlay) !important;
-}
 
 /* Font Utilities */
 .font-poppins {
@@ -135,7 +131,6 @@ a {
     height: 340px;
     border-radius: 150px 150px 30px 30px; /* Adjusted for smaller size */
   }
-  
 }
 
 .event-bg {
@@ -160,7 +155,6 @@ a {
   height: 180px;
   border-radius: 8px;
   background: white;
-  
 }
 
 .partner-bg img {
@@ -169,7 +163,6 @@ a {
   object-fit: cover;
 }
 
-
 /* Media query for small screens */
 @media (max-width: 640px) {
   .event-bg {
@@ -177,15 +170,12 @@ a {
     height: 450px;
     border-radius: 16px;
   }
-  
+
   .event-image {
     width: 315px;
     height: 300px;
     border-radius: 8px;
-  
+
     background: white;
   }
-  
 }
-
-
