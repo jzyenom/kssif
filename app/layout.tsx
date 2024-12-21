@@ -12,12 +12,12 @@ type Metadata = {
 export const metadata: Metadata = {
   title: "KSSIF - Kingdom Star Sports International Foundation",
   description: "Christian Sport organization",
-  icon: "favicon.png", // Ensure this file is in the 'public' directory
+  icon: "favicon.png",
 };
 
 // Props type for RootLayout
 interface RootLayoutProps {
-  children: ReactNode; // Ensures children can be any valid React node
+  children: ReactNode;
 }
 
 // RootLayout component

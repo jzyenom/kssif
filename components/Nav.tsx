@@ -21,21 +21,21 @@ const Nav: React.FC = () => {
     <nav
       className={`fixed top-0 w-full z-50 shadow-md transition-all duration-300 ${
         isScrolled
-          ? "bg-black/50 backdrop-blur-md text-blue-500"
+          ? "bg-white/50 backdrop-blur-md text-black"
           : "bg-black text-white"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center h-16">
         {/* Logo */}
         <img src="/kssif_Logo.png" alt="Logo" className="h-10" />
-        
+
         {/* Desktop Navigation */}
         <div className="hidden md:flex space-x-4 items-center">
           {links.map((link, idx) => (
             <a
               key={idx}
               href={`#${link.toLowerCase().replace(/\s+/g, "")}`}
-              className="hover:text-orange-500 md:text-sm"
+              className="hover:text-white md:text-sm"
             >
               {link}
             </a>

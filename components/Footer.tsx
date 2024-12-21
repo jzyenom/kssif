@@ -8,13 +8,14 @@ const Footer: React.FC = () => {
         "A 16, Flat 2, Aso House Estate, Airport Road, Abuja, Nigeria.",
         "07082383432, 09077720905",
       ],
+      
     },
     { title: "Quick Links", items: ["FAQs", "Home", "Contact Us", "Donate"] },
-    {
-      title: "Products",
-      items: ["Hosting", "Domains", "Security", "SSL"],
-      isAnchor: true,
-    },
+    // {
+    //   title: "Products",
+    //   items: ["Hosting", "Domains", "Security", "SSL"],
+    //   isAnchor: true,
+    // },
     {
       title: "Connect",
       items: ["Twitter", "Facebook", "Instagram", "Youtube"],
@@ -61,8 +62,8 @@ const Footer: React.FC = () => {
           ))}
         </ul>
 
-        <div className="flex flex-col-reverse justify-between pt-5 pb-4 border-t lg:flex-row bg-top border-black">
-          <ul className="flex flex-col space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
+        <div className="flex flex-col-reverse justify-between pt-5 pb-4 border-t mt-4 lg:flex-row bg-top border-black">
+          {/* <ul className="flex flex-col space-y-2 lg:mb-0 sm:space-y-0 sm:space-x-5 sm:flex-row">
             {footerLinks.map((link, idx) => (
               <li key={idx}>
                 <a
@@ -73,9 +74,9 @@ const Footer: React.FC = () => {
                 </a>
               </li>
             ))}
-          </ul>
+          </ul> */}
           <p className="text-md text-gray-200 hover:text-white transition-colors duration-300 font-light tracking-tight">
-            © 2021 Company Inc.
+            © 2024 Cre8tif Technologies.
           </p>
         </div>
       </div>
